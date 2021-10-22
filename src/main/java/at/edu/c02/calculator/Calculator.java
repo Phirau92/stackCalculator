@@ -7,7 +7,7 @@ public interface Calculator {
 		// Fabian + Philip: mod operation added
 		add, sub, mul, div, mod
 	};
-
+	//test
 	void push(double value);
 	
 	double pop() throws CalculatorException;
