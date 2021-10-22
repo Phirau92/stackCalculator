@@ -8,6 +8,7 @@ public interface Calculator {
 		add, sub, mul, div, mod
 	};
 	//test
+	//test
 	void push(double value);
 	
 	double pop() throws CalculatorException;
