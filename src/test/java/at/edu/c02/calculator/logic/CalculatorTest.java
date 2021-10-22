@@ -53,22 +53,6 @@ public class CalculatorTest {
 
 	}
 
-	@Test
-	public void testSimpleModOperation() throws Exception {
-
-		Calculator calc = new CalculatorImpl();
-		calc.push(5);
-		calc.push(2);
-		double result = calc.perform(Operation.mod);
-
-		assertEquals(1, result, 0);
-
-	}
-	
-	
-	
-	
-
 	//
 	@Test(expected = CalculatorException.class)
 	public void testPopOnEmptyStack() throws Exception {
@@ -89,12 +73,23 @@ public class CalculatorTest {
 			calc.perform(Operation.div);
 
 			fail("Exception expected");
-			
+
 
 		} catch (CalculatorException e) {
 			assertEquals("Division by zero", e.getMessage());
 			// e.getCause()
 		}
+	}
 
+	// Mario + Yana: create unit for modulo operation
+	@Test
+	public void testSimpleModOperation() throws Exception {
+
+		Calculator calc = new CalculatorImpl();
+		calc.push(5);
+		calc.push(2);
+		double result = calc.perform(Operation.mod);
+
+		assertEquals(1, result, 0);
 	}
 }

@@ -4,6 +4,7 @@ package at.edu.c02.calculator;
 public interface Calculator {
 
 	enum Operation {
+		// Fabian + Philip: mod operation added
 		add, sub, mul, div, mod
 	};
 

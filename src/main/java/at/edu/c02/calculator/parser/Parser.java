@@ -78,6 +78,7 @@ public class Parser {
 			return Operation.div;
 		else if ("-".equals(value))
 			return Operation.sub;
+		// Fabian + Philip: match % to mod
 		else if ("%".equals(value))
 			return Operation.mod;
 		
