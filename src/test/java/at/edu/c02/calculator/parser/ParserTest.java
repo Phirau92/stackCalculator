@@ -49,8 +49,9 @@ public class ParserTest {
 		Parser parser = new Parser(cal);
 		parser.parse(new File("src/test/resources/test04.xml"));
 
-		verify(cal).push(5);
-		verify(cal).push(2);
+		// Mario + Yana
+		verify(cal).push(1.0);
+		verify(cal).push(2.0);
 		verify(cal).perform(Operation.mod);
 
 		verifyNoMoreInteractions(cal);
